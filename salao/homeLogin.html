@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Gestão Barbearia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="scale">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">Agendamento de horários</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row input-group-text">
+            <div class="col-3 mt-5">
+                <form id="form">
+                    <div class="mb-3">
+                        <label ><b>Cliente</b></label>
+                        <select name="cliente" class="form-select" aria-label="Disabled select example" id="cliente">
+                            <option value="1">Lucas</option>
+                        </select>  
+                    </div> 
+                    <div class="mb-3">
+                        <label><b>Funcionário</b></label>
+                        <select name="funcionario" class="form-select" aria-label="Disabled select example" id="func">
+                            <option value="1">João</option>
+                            <option value="2">Maria</option>
+                            <option value="3">José</option>
+                        </select>
+                    </div> 
+                    <div class="mb-3">
+                        <label><b>Data</b></label>
+                        <input type="date" class="form-control" name="dataAg" value="2022-10-28" id="data">
+                    </div>
+                    <div class="mb-3">
+                        <label><b>Hora</b></label>
+                        <select name="hora" class="form-select" aria-label="Disabled select example" id="hora">
+                            <option value="8">08:00</option>
+                            <option value="9">09:00</option>
+                            <option value="10">10:00</option>
+                            <option value="11">11:00</option>
+                            <option value="13">13:00</option>
+                            <option value="14">14:00</option>
+                            <option value="15">15:00</option>
+                            <option value="16">16:00</option>
+                            <option value="17">17:00</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Agendar horário</button>
+                </form>
+            </div>
+            <div class="col-5 mt-5">
+                <div id="hid" hidden>
+                    <h3>Agendado</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Funcionário</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="cl"></td>
+                                <td id="f"></td>
+                                <td id="da"></td>
+                                <td id="ho"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row input-group-text">
+            <div class="col mt-5">
+                <div class="mb-3">
+                    <input type="button" class="btn btn-dark" value="Ver escalas" onclick="getEmployeeScale();teste();" ></input>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/HomeLogin.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function teste() {
+            var employee = document.getElementById("func").value;
+            var date = document.getElementById("data").value;
+            var hour = document.getElementById("hora").value;
+            var client = document.getElementById("cliente").value;
+            var xhttp = new XMLHttpRequest();
+           
+            document.getElementById("cl").innerHTML = client;
+            document.getElementById("f").innerHTML = employee;
+            document.getElementById("da").innerHTML = date;
+            document.getElementById("ho").innerHTML = hour;
+
+            var hid = document.getElementById("hid");
+            hid.hidden = false;
+        }
+    </script>
+</body>
+
+</html>
