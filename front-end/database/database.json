@@ -1,0 +1,48 @@
+{
+  "data-user": [
+    {
+      "newUser": {
+        "name": "teste",
+        "email": "teste@teste",
+        "phone": "99999999999",
+        "password": "e2dAzz9vBDLDaR@"
+      },
+      "id": 1
+    }
+  ],
+  "login-user": [
+    {
+      "newLogin": {
+        "email": "teste@teste",
+        "password": "e2dAzz9vBDLDaR@"
+      },
+      "id": 1
+    }
+  ],
+  "escala": [
+    {
+      "name": "Johnny",
+      "segunda": "Indisponivel",
+      "terca": "Disponivel",
+      "quarta": "Indisponivel",
+      "quinta": "Disponivel",
+      "sexta": "Indisponivel",
+      "sabado": "Disponivel",
+      "domingo": "Indisponivel",
+      "horarios": [
+        {
+          "primeiro": "09:00",
+          "segundo": "10:00",
+          "terceiro": "11:00",
+          "quarto": "13:00",
+          "quinto": "14:00",
+          "sexto": "15:00",
+          "setimo": "16:00",
+          "oitavo": "17:00",
+          "nono": "18:00"
+        }
+      ]
+    }
+  ],
+  "agendamento": []
+}

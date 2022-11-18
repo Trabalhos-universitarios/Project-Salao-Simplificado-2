@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Horários disponíveis!</h2>
+<mat-dialog-content>
+
+  <app-table-escala></app-table-escala>
+
+</mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="cancelarAgendamento()">
+      Cancel
+    </button>
+
+    <button
+      mat-button
+      (click)="comfirmarAgendamento()"
+      [mat-dialog-close]="true"
+      cdkFocusInitial
+    >
+      Confirmar agendamento!
+    </button>
+  </mat-dialog-actions>
+

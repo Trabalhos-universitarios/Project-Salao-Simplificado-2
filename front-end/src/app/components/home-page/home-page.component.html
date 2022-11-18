@@ -1,0 +1,12 @@
+<div class="spinner" *ngIf="spinner === true">
+  <mat-spinner></mat-spinner>
+  <!-- <mat-progress-bar mode="query"></mat-progress-bar> -->
+</div>
+
+<div class="form-teste" *ngIf="spinner === false">
+  <app-topo></app-topo>
+  <div class="painel">
+    <app-painel></app-painel>
+  </div>
+  <!-- <app-rodape></app-rodape> -->
+</div>

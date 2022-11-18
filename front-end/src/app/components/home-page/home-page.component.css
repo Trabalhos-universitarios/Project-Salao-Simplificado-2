@@ -1,0 +1,18 @@
+.mat-spinner{
+  position: fixed;
+  margin-left: 50%;
+  margin-top: 400px;
+}
+
+.mat-progress-bar{
+  position: fixed;
+  margin-top: 400px;
+  width: 100%;
+}
+
+.painel{
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+

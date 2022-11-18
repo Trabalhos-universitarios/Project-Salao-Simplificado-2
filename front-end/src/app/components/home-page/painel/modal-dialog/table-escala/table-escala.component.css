@@ -1,0 +1,59 @@
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.table{
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+.example-spacer {
+  flex: 5 5 auto;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+
+}
+
+a:hover {
+  color: #ff4081;
+  cursor: pointer;
+}
+
+button{
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  font-weight: bold;
+  /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+
+}
+
+button:hover{
+  color: #ff4081;
+
+}
+
+button:disabled:hover{
+  color: #eb85a7;
+  cursor: not-allowed;
+}
+
+
+th{
+  text-align: center;
+}
+
+td, button{
+  margin-left: -40px;
+}

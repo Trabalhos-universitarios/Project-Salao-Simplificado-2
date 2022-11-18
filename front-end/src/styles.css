@@ -1,0 +1,1197 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #2B2B2D;
+  color: #ffffff;
+
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5px;
+
+}
+
+p {
+  color: white;
+  margin-top: 25px;
+}
+
+input{
+  color: white;
+}
+
+.forms-a {
+  font-size: 15px;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.forms-a:hover {
+  /* color: #FF1493; */
+  color: #ff4081;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+
+.forms-container {
+  position: absolute;
+
+  background-color: #424242;
+  border-radius: 10px;
+
+  text-align: center;
+
+  box-shadow: 15px 10px 5px 5px #00000080;
+
+}
+
+
+/* Telas desktop 2560px */
+@media (max-width: 2560px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 1110px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+
+}
+
+/* Telas desktop 1920px */
+@media (max-width: 1920px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 800px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+
+}
+
+/* Telas desktop/notebook 1680px */
+@media (max-width: 1680px ) {
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 40%;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+
+}
+
+/* Telas notebook 1440px */
+@media (max-width: 1440px ) {
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 40%;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas notebooks/tablets 1024px */
+@media (max-width: 1024px ) {
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 350px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas tablets/smatphones 900px */
+@media (max-width: 900px ) {
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 250px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 750px */
+@media (max-width: 750px ) {
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 150px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 600px */
+@media (max-width: 600px ) {
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 100px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 500px */
+@media (max-width: 500px ) {
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 50px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 450px */
+@media (max-width: 450px ) {
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 20px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 375px */
+@media (max-width: 375px){
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: auto;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    width: 250px;
+    display: block;
+
+  }
+
+  .mat-form-field{
+    width: 70%;
+    margin-top: -10px;
+    margin-bottom: -5px;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+  .button-forms{
+    margin-top: 10px;
+  }
+  button{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .link-forms{
+    margin-top: 10px;
+
+
+  }
+}
+
+/* Telas smatphones 320px */
+@media (max-width: 320px){
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: auto;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    width: 250px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+    margin-top: -10px;
+    margin-bottom: -5px;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+  .button-forms{
+    margin-top: 10px;
+  }
+  button{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .link-forms{
+    margin-top: 10px;
+
+  }
+}
+
+
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5px;
+
+}
+
+p {
+  color: white;
+  margin-top: 25px;
+}
+
+input{
+  color: white;
+}
+
+.forms-a {
+  font-size: 15px;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.forms-a:hover {
+  /* color: #FF1493; */
+  color: #ff4081;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+
+.forms-container {
+  position: absolute;
+
+  background-color: #424242;
+  border-radius: 10px;
+
+  text-align: center;
+
+  box-shadow: 15px 10px 5px 5px #00000080;
+
+}
+
+
+/* Telas desktop 2560px */
+@media (max-width: 2560px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 1110px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+
+}
+
+/* Telas desktop 1920px */
+@media (max-width: 1920px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 800px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+
+}
+
+/* Telas desktop/notebook 1680px */
+@media (max-width: 1680px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 40%;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+
+}
+
+/* Telas notebook 1440px */
+@media (max-width: 1440px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 40%;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas notebooks/tablets 1024px */
+@media (max-width: 1024px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 350px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas tablets/smatphones 900px */
+@media (max-width: 900px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 250px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 750px */
+@media (max-width: 750px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 150px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 600px */
+@media (max-width: 600px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 100px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 500px */
+@media (max-width: 500px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 50px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 450px */
+@media (max-width: 450px ) {
+  .forms-container {
+    margin-top: 150px;
+    margin-left: 20px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 350px;
+    min-width: 50px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+
+  .button-fomrs{
+    margin-top: 30px;
+  }
+  button{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .link-forms{
+    margin-top: 30px;
+  }
+}
+
+/* Telas smatphones 375px */
+@media (max-width: 375px){
+  .forms-container {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: auto;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    width: 250px;
+    display: block;
+
+  }
+
+  .mat-form-field{
+    width: 70%;
+    margin-top: -10px;
+    margin-bottom: -5px;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+  .button-forms{
+    margin-top: 10px;
+  }
+  button{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .link-forms{
+    margin-top: 10px;
+
+
+  }
+}
+
+/* Telas smatphones 320px */
+@media (max-width: 320px){
+  .forms-container {
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: auto;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    width: 250px;
+    display: block;
+  }
+
+  .mat-form-field{
+    width: 70%;
+    margin-top: -10px;
+    margin-bottom: -5px;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
+  .button-forms{
+    margin-top: 10px;
+  }
+  button{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .link-forms{
+    margin-top: 10px;
+
+  }
+}
+
+

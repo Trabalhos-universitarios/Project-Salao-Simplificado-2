@@ -1,0 +1,89 @@
+<form [formGroup]="formulario" novalidate (ngSubmit)="confirmRegister()">
+<div class="forms-container">
+  <h1>Register!</h1>
+  <mat-form-field aspect="fill">
+    <mat-label> Enter your name! </mat-label>
+    <input
+      matInput
+      placeholder="example João Silva"
+      formControlName="nome"
+    />
+  </mat-form-field>
+
+  <mat-form-field aspect="fill">
+    <mat-label> Enter your e-mail! </mat-label>
+    <input
+      matInput
+      placeholder="email@example.com"
+      formControlName="email"
+    />
+
+  </mat-form-field>
+
+  <mat-form-field aspect="fill">
+    <mat-label> Enter your mobile phone! </mat-label>
+    <input
+      matInput
+      placeholder="example 41999999999"
+      formControlName="telefone"
+    />
+  </mat-form-field>
+
+  <br />
+  <mat-form-field aspect="fill">
+    <mat-label>Choose a password!</mat-label>
+    <input
+    matInput
+    [type]="hide ? 'password' : 'text'"
+    formControlName="senha"
+    />
+    <a
+      color="primary"
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </a>
+  </mat-form-field>
+
+  <mat-form-field aspect="fill">
+    <mat-label>Repeat the password!</mat-label>
+    <input
+    matInput
+    [type]="hide ? 'password' : 'text'"
+    formControlName="confirmPsw"
+    />
+
+    <a
+      color="primary"
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </a>
+
+  </mat-form-field>
+
+  <section>
+    <div class="button-forms">
+      <button
+      type="submit"
+      mat-flat-button color="primary"
+
+      >Confirm Registration!</button>
+      <!-- <button mat-flat-button disabled>Disabled</button> -->
+    </div>
+  </section>
+
+  <div class="link-forms">
+    <a class="forms-a" href="login">Return to login!</a>
+  </div>
+</div>
+</form>
