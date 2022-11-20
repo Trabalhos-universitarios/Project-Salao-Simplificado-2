@@ -49,8 +49,23 @@ existentes em :
 ```javascript 
 package.json
 ```
-
 Caso note que falta algun, deverá instalar manualmente através do terminal usando o comando ```npm install <nome do pacote>```.
+
+### Back End
+````
+Para que o código funcione corretamente deve-se ser instalados as seguintes ferramentas:
+````
+
+- Xampp em <a>https://www.apachefriends.org/download.html</a>
+ 
+ Após a instalação e configuração do xampp deve-se seguir os seguintes passos:
+
+ #### Passo 1
+ - Navegar até a pasta back-end neste repositório, copiar a pasta salao.
+ - Navegar em sua máquina até a pasta xampp/htdocs e colar a pasta copiada (salao).
+ #### Passo 2
+ - Navegar até a pasta back-end/sql neste repositório e copiar a pasta data.
+ - Navegar em sua máquina até a pasta xampp/mysql e colar a pasta copiada (data).
 
 
 
