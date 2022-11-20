@@ -1,1 +1,0 @@
-no caminho "C:\xampp\mysql" substituir pasta data pela fornecida

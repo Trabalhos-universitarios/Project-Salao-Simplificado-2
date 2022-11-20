@@ -22,7 +22,7 @@ Neste projeto foi elaborado um sistema de agendamento para barbearia chamado "Sa
 é simplificar  agendamento de um salão de barbearia, onde o usuário vai poder entrar no sistema através de login e senha e verificar o profissional disponível na data solicitada e verificar se esse profissional vai estar trabalhando na data solicitada.
 
 
-## Como instalar o projeto
+## Como instalar e iniciar o projeto
 ````
 Para que o código funcione corretamente deve-se ser instalados as seguintes ferramentas:
 ````
@@ -43,8 +43,8 @@ Após a instalação dos pacotes, deve-se iniciar o projeto utilizando o seguint
 
 - Iniciar servidor Angular ```ng serve```
 
-**OBS**
-Caso o projeto de algum erro de execução, verifique em node_modules se estão instalados todos os pacotes 
+**OBS:**
+Caso ocorra algum erro de execução, verifique em **node_modules** se estão instalados todos os pacotes 
 existentes em :
 ```javascript 
 package.json
