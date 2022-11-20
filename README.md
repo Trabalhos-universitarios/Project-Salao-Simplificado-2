@@ -25,5 +25,12 @@ Neste projeto foi elaborado um sistema de agendamento para barbearia chamado
 "Salão Simplificado", cujo o próprio nome já diz, a ideia é simplificar  agendamento
 de um salão de barbearia, onde o usuário vai poder entrar no sistema através de 
 login e senha e verificar o profissional disponível na data solicitada e verificar
- se esse profissional vai estar trabalhando na data solicitada.
+se esse profissional vai estar trabalhando na data solicitada.
 ```
+
+
+## Como instalar o projeto
+````
+Para que o código funcione corretamente deve-se ser instalados as seguintes ferramentas:
+    - Node em <a>https://nodejs.org/en/download/</a>
+````
