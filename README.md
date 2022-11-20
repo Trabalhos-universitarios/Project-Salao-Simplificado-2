@@ -67,5 +67,9 @@ Para que o código funcione corretamente deve-se ser instalados as seguintes fer
  - Navegar até a pasta back-end/sql neste repositório e copiar a pasta data.
  - Navegar em sua máquina até a pasta xampp/mysql e colar a pasta copiada (data).
 
+ image.png
+
+ <img src="image.png">
+
 
 
