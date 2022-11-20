@@ -2,19 +2,17 @@
     Project-Salao-Simplificado
 </h1>
 
-<h1 align="center">Projeto Spring e React <img align="center" alt="Johnny-Oficial" height="30" width="40" src="./frontend/src/assets/img/Medalha.svg" /></h1>
-
 ```javascript
-@Author Johnny Carvaho
-@Date 2022-07-17
+@Authores Johnny Carvaho - Lucas Lemes
+@Date 2022-11
 ```
 
 ## Principais tecnologias utilizadas: <br/>
 <p>
   <img align="center" alt="Angular" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" />
+  <img align="center" alt="TS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
   <img align="center" alt="PHP" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
   <img align="center" alt="Xampp" height="30" width="40" src="https://cdn2.iconfinder.com/data/icons/pack1-baco-flurry-icons-style/512/XAMPP.png" />
- 
 </p>
 
 ## Resumo do projeto
