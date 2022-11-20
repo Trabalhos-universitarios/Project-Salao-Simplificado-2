@@ -32,5 +32,5 @@ se esse profissional vai estar trabalhando na data solicitada.
 ## Como instalar o projeto
 ````
 Para que o código funcione corretamente deve-se ser instalados as seguintes ferramentas:
-    - Node em <a>https://nodejs.org/en/download/</a>
 ````
+- Node em <a>https://nodejs.org/en/download/</a>
