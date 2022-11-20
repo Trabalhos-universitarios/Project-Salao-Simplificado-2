@@ -39,5 +39,23 @@ Para que o código funcione corretamente deve-se ser instalados as seguintes fer
 
 Após a instalação e configuração do Node, deve-se instalar as seguintes ferramentas através do terminal:
 
-- Type Script ```npm install -g typescript```
+- Type Script ```npm i -g typescript```
+- Angular CLI ```npm i @angular/cli```
+
+Após a instalação das ferramentas acima, deve-se executar a instalação dos pacotes através do seguinte comando:
+
+- Node_Modules ```npm install```
+
+Após a instalação dos pacotes, deve-se iniciar o projeto utilizando o seguinte comando:
+
+- Iniciar servidor Angular ```ng serve```
+
+**OBS**
+Caso o projeto de algum erro de execução, verifique em node_modules se estão instalados todos os pacotes 
+existentes em :
+```javascript 
+package.json
+```
+
+
 
