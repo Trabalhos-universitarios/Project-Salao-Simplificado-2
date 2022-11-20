@@ -67,9 +67,8 @@ Para que o código funcione corretamente deve-se ser instalados as seguintes fer
  - Navegar até a pasta back-end/sql neste repositório e copiar a pasta data.
  - Navegar em sua máquina até a pasta xampp/mysql e colar a pasta copiada (data).
 
- image.png
+Após essas configurações, deve-se inicializar o servidos apache e o mysql diretamente no painel de controle do xampp, feito isso basta recarregar a página http://localhost:4200/ ou a porta que vocie selecionou para rodar o Angular através do ```ng serve```.
 
- <img src="image.png">
-
+Para ver os dados sendo inseridos na tabela, basta navegar até http://localhost/phpmyadmin/ ou abrir o painel de controle do xampp (XAMPP Control Painel) e clicar no botão Admin do MySQL em em seguida abris a tabela que deseja consultar dentro do database salaosimp.
 
 
