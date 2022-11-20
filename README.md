@@ -17,16 +17,10 @@
 
 ## Resumo do projeto
 
-```
-Este é um projeto em Angular + PHP elaborado como atividade universitária para 
-fins acadêmicos, esta atividade se faz referência a entrega de trabalho para matéria 
-de Ëxperiência criativa Projetando Soluções Computacionais". 
-Neste projeto foi elaborado um sistema de agendamento para barbearia chamado 
-"Salão Simplificado", cujo o próprio nome já diz, a ideia é simplificar  agendamento
-de um salão de barbearia, onde o usuário vai poder entrar no sistema através de 
-login e senha e verificar o profissional disponível na data solicitada e verificar
-se esse profissional vai estar trabalhando na data solicitada.
-```
+
+    Este é um projeto em Angular + PHP elaborado como atividade universitária para fins acadêmicos, esta atividade se faz referência a entrega de trabalho para matéria de Ëxperiência criativa Projetando Soluções Computacionais". 
+    Neste projeto foi elaborado um sistema de agendamento para barbearia chamado "Salão Simplificado", cujo o próprio nome já diz, a ideia
+    é simplificar  agendamento de um salão de barbearia, onde o usuário vai poder entrar no sistema através de login e senha e verificar o profissional disponível na data solicitada e verificar se esse profissional vai estar trabalhando na data solicitada.
 
 
 ## Como instalar o projeto
@@ -56,6 +50,8 @@ existentes em :
 ```javascript 
 package.json
 ```
+
+Caso note que falta algun, deverá instalar manualmente através do terminal usando o comando ```npm install <nome do pacote>```.
 
 
 
