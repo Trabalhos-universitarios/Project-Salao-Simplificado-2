@@ -33,4 +33,11 @@ se esse profissional vai estar trabalhando na data solicitada.
 ````
 Para que o código funcione corretamente deve-se ser instalados as seguintes ferramentas:
 ````
+
+### Front End
 - Node em <a>https://nodejs.org/en/download/</a>
+
+Após a instalação e configuração do Node, deve-se instalar as seguintes ferramentas através do terminal:
+
+- Type Script ```npm install -g typescript```
+
