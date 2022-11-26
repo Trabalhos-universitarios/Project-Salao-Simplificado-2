@@ -14,7 +14,7 @@ export class FuncionarioService {
 
   constructor(private http: HttpClient) {}
 
-  // Método para buscar a escala dos funcionários no banco e mostrar na tabela
+  // Método para buscar os funcionários no banco e mostrar na tabela
   public getEmployee(): Observable<FuncionarioInterface[]> {
 
     const httpOptions = {

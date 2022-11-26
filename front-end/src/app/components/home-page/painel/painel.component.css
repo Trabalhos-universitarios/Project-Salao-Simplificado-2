@@ -32,6 +32,7 @@ button:disabled:hover{
 
 /*---> CARD <---*/
 .cards-container{
+  margin-top: 25px;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);

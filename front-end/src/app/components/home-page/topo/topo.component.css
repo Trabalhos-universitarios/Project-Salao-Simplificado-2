@@ -4,6 +4,7 @@
 
 
 .logout{
+  position: absolute;
   background-color: transparent;
   cursor: pointer;
 
@@ -12,5 +13,11 @@
 
   margin-left: 95%;
 
+  color: white;
+  border-color: transparent;
+}
 
+img{
+  width: 100px;
+  height: 50px;
 }
