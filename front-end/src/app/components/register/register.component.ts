@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { RegisterModel } from 'src/models/register-model';
 import { UserService } from 'src/services/user.service';
 import Swal from 'sweetalert2'
@@ -12,7 +13,8 @@ import Swal from 'sweetalert2'
 export class RegisterComponent implements OnInit {
   constructor(
     private UserService: UserService,
-    private newUserForm: FormBuilder
+    private newUserForm: FormBuilder,
+    private onLogin: Router
   ) { }
 
   ngOnInit(): void { }
@@ -64,9 +66,10 @@ export class RegisterComponent implements OnInit {
             title: 'Cadastro efetuado com sucesso!',
             showConfirmButton: false,
             timer: 2500
-
           })
           this.formulario.reset()
+          this.onLogin.navigate(['/login'])
+
         }
         else if (res === 'error') {
           Swal.fire({
