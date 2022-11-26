@@ -11,7 +11,9 @@
         $sql = "SELECT * FROM funcionario";
         $res = $conn->query($sql);
         while($row = $res->fetch_assoc()){
-            $array[] = array('nome' => $row['nome']);
+            if($row['userAdmin'] == 0 && $row['idEscala'] >=1){
+                $array[] = array('nome' => $row['nome']);
+            }
         }
         return $array;
     }
