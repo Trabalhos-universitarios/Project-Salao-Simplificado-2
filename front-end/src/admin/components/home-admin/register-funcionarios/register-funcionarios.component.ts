@@ -4,6 +4,10 @@ import { AdminService } from 'src/admin/services/admin.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { FuncionarioInterface } from 'src/interfaces/funcionario-interface';
 import { Funcionario, FuncionariosColumns } from 'src/admin/interfaces/funcionario';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { RegisterFuncionarioModel } from 'src/admin/models/register-funcionario.model';
 
 
 
@@ -18,75 +22,77 @@ const COLUMNS_SCHEMA = [
 })
 export class RegisterFuncionariosComponent implements OnInit {
 
-  public USER_DATA: any
-
-  //displayedColumns: string[] = ['name', 'CPF', 'email', 'senha', 'Edit'];
-  displayedColumns: string[] = FuncionariosColumns.map((col) => col.key);
-  //columnsSchema: any = COLUMNS_SCHEMA;
-  columnsSchema: any = FuncionariosColumns;
-  dataSource = new MatTableDataSource<FuncionarioInterface[]>();
-
-
   constructor(
-    private adminService: AdminService
-  ) {
-   }
+    private adminService: AdminService,
+    private newUserForm: FormBuilder,
+    private onLogin: Router
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-    this.adminService.getEmployee().subscribe(
-      (resposta: any) => {
-        this.dataSource.data = resposta
-        console.log('Essa é a resposta do dataSource: ', this.dataSource.data);
+  formulario = this.newUserForm.group({
+    nome: new FormControl(null, [Validators.required]),
+    cpf: new FormControl(null, [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    senha: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
+    confirmPsw: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)])
+  });
 
-      }
-    )
-  }
+  hide = true;
 
+  // --> FALTA IMPLEMENTAR A LÓGICA PARA NÃO DEIXAR USUÁRIO DIGITAR ESPAÇOS EM BRANCO <--
 
+  //Botão confirmar registro
+  public confirmRegister() {
 
-  // Função para adicionar novos campos a tabela
-  addRow() {
-    const newRow: Funcionario = {
-      nome: '',
-      cpf: '',
-      email: '',
-      senha: '',
-      isEdit: true
-    };
-    this.dataSource.data = [...this.dataSource.data];
-  }
-
-  // Função para remover campos da tabela
-  /*removeRow(id: number) {
-
-    if (this.dataSource) {
+    if (this.formulario.status === 'INVALID') {
       Swal.fire({
-        title: 'Deseja realmente deletar?',
+        icon: 'error',
+        title: 'Oops...',
+        text: 'O formulário deve ser preenchido corretamente!',
+      })
+    }
+    else if (this.formulario.value.confirmPsw !== this.formulario.value.senha) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'As senhas não conferem!',
+        timer: 2500
+      })
+    }
+    else {
+      let newFuncionario: RegisterFuncionarioModel = new RegisterFuncionarioModel(
+        this.formulario.value.nome,
+        this.formulario.value.cpf,
+        this.formulario.value.email,
+        this.formulario.value.senha,
+      );
+      this.adminService.registerFunc(newFuncionario).subscribe(resposta => {
+        console.log('Essa é a resposta', resposta)
 
-        showCancelButton: true,
-        confirmButtonText: 'Sim',
-
-      }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        /*if (result.isConfirmed) {
-          this.dataSource = this.dataSource.filter((func: any) => func.id !== id);
-
+        if (resposta === 'success') {
           Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: 'Deletado com',
+            title: 'Cadastro efetuado com sucesso!',
             showConfirmButton: false,
-            timer: 1500
+            timer: 2500
           })
-        } else if (result.isDenied) {
+          this.formulario.reset()
+          this.onLogin.navigate(['/login'])
+
         }
-      })
+        else if (resposta === 'error') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Usuário já cadastrado',
+            timer: 2500
+          })
+        }
+      });
     }
-  }*/
-
-  public dialog() {
-
   }
+
 
 }

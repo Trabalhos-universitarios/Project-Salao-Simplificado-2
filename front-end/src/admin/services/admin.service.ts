@@ -54,13 +54,13 @@ export class AdminService {
   }
 
    //método para inserir novo funcionario no banco de dados
-   public registerUser(newUser: RegisterFuncionarioModel) {
+   public registerFunc(newFuncionario: RegisterFuncionarioModel) {
 
-    console.log(JSON.stringify(newUser));
+    console.log(JSON.stringify(newFuncionario));
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
-    return this.http.post(`${API}/registrationEmployee.php`, JSON.stringify(newUser), httpOptions); //registration
+    return this.http.post(`${API}/registrationEmployee.php`, JSON.stringify(newFuncionario), httpOptions); //registration
   }
 
 }
