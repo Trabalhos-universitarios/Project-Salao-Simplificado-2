@@ -1,10 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { FuncionarioInterface } from 'src/interfaces/funcionario-interface';
 import { PeriodicElement } from 'src/interfaces/teste-interface';
 import { Escala } from 'src/models/escala-model';
 import { FuncionarioService } from 'src/services/funcionario.service';
-import { ModalDialogComponent } from '../modal-dialog.component';
 import { PainelComponent } from '../../painel.component';
 import { Agendamento } from 'src/models/agendamento-model';
 import { LoginComponent } from 'src/app/components/login/login.component';

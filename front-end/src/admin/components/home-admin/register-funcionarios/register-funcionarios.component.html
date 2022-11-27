@@ -8,7 +8,7 @@
 </article>
 
 
-    <table mat-table [dataSource]="dataSource">
+    <table mat-table [dataSource]="USER_DATA">
       <ng-container [matColumnDef]="col.key" *ngFor="let col of columnsSchema">
         <th mat-header-cell *matHeaderCellDef>
           {{ col.label }}
@@ -22,7 +22,7 @@
               <button mat-button (click)="element.isEdit = !element.isEdit">
                 <mat-icon>edit_square</mat-icon>
               </button>
-              <button mat-button class="button-remove" (click)="removeRow(element.id)">
+              <button mat-button class="button-remove">
                 <mat-icon>delete_forever</mat-icon>
               </button>
             </div>

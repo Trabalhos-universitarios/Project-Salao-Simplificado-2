@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { API } from 'backend/api';
 import { FuncionarioInterface } from 'src/interfaces/funcionario-interface';
 import { AdminModel } from '../models/admin.model';
-import { first, Observable } from 'rxjs';
+import { first, Observable, map } from 'rxjs';
+import { RegisterFuncionarioModel } from '../models/register-funcionario.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class AdminService {
 
 
   // Método para buscar os funcionários no banco e mostrar na tabela
-  public getEmployee(): Observable<FuncionarioInterface[]> {
+  /*public getEmployee(): Observable<FuncionarioInterface[]> {
     const httpOptions = {
       headers: new HttpHeaders({'Contente-Type': 'aplication/json'})
     };
@@ -36,6 +37,30 @@ export class AdminService {
       first(),//Encerra conexão
       res => res
     )
+  }*/
+
+  public getEmployee(): Observable<FuncionarioInterface[]> {
+
+    const httpOptions = {
+      headers: new HttpHeaders({'Contente-Type': 'aplication/json'})
+    };
+
+    // Buscar na base de dados
+    return this.http.get<FuncionarioInterface[]>(`${API}/getEmployee.php`)
+    .pipe(
+      first(),//Encerra conexão
+      res => res
+    )
+  }
+
+   //método para inserir novo funcionario no banco de dados
+   public registerUser(newUser: RegisterFuncionarioModel) {
+
+    console.log(JSON.stringify(newUser));
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.http.post(`${API}/registrationEmployee.php`, JSON.stringify(newUser), httpOptions); //registration
   }
 
 }

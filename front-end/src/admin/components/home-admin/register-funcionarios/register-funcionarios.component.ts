@@ -1,38 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import Swal from 'sweetalert2';
 
-const USER_DATA = [
-  {id: 1, "name": "Johnny Carvalho", "CPF": '09898767656', "email": "example@example.com", "senha": '999999999'},
-  {id: 2, "name": "Lucas Lemes", "CPF": '09898767656', "email": "example@example.com", "senha": '999999999'},
-  {id: 3, "name": "Bruna Boccaldi", "CPF": '09898767656', "email": "example@example.com", "senha": '999999999'}
-];
+import { AdminService } from 'src/admin/services/admin.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { FuncionarioInterface } from 'src/interfaces/funcionario-interface';
+import { Funcionario, FuncionariosColumns } from 'src/admin/interfaces/funcionario';
+
+
 
 const COLUMNS_SCHEMA = [
-  {
-      key: "name",
-      type: "text",
-      label: "Full Name"
-  },
-  {
-      key: "CPF",
-      type: "text",
-      label: "CPF"
-  },
-  {
-      key: "email",
-      type: "text",
-      label: "email"
-  },
-  {
-    key: "senha",
-    type: "text",
-    label: "senha"
-},
-{
-  key: "Edit",
-  type: "isEdit",
-  label: "Edit"
-}
+
 ]
 
 @Component({
@@ -42,24 +18,47 @@ const COLUMNS_SCHEMA = [
 })
 export class RegisterFuncionariosComponent implements OnInit {
 
-  constructor() { }
+  public USER_DATA: any
+
+  //displayedColumns: string[] = ['name', 'CPF', 'email', 'senha', 'Edit'];
+  displayedColumns: string[] = FuncionariosColumns.map((col) => col.key);
+  //columnsSchema: any = COLUMNS_SCHEMA;
+  columnsSchema: any = FuncionariosColumns;
+  dataSource = new MatTableDataSource<FuncionarioInterface[]>();
+
+
+  constructor(
+    private adminService: AdminService
+  ) {
+   }
 
   ngOnInit(): void {
+
+    this.adminService.getEmployee().subscribe(
+      (resposta: any) => {
+        this.dataSource.data = resposta
+        console.log('Essa é a resposta do dataSource: ', this.dataSource.data);
+
+      }
+    )
   }
 
-  displayedColumns: string[] = ['name', 'CPF', 'email', 'senha', 'Edit'];
-  dataSource: any = USER_DATA;
-  columnsSchema: any = COLUMNS_SCHEMA;
 
 
   // Função para adicionar novos campos a tabela
   addRow() {
-    const newRow = {"name": "", "occupation": "", "dateOfBirth": "", "age": 0, isEdit: true}
-    this.dataSource = [newRow, ...this.dataSource];
+    const newRow: Funcionario = {
+      nome: '',
+      cpf: '',
+      email: '',
+      senha: '',
+      isEdit: true
+    };
+    this.dataSource.data = [...this.dataSource.data];
   }
 
   // Função para remover campos da tabela
-  removeRow(id: number) {
+  /*removeRow(id: number) {
 
     if (this.dataSource) {
       Swal.fire({
@@ -70,13 +69,13 @@ export class RegisterFuncionariosComponent implements OnInit {
 
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
+        /*if (result.isConfirmed) {
           this.dataSource = this.dataSource.filter((func: any) => func.id !== id);
 
           Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: 'Deletado com sucesso!',
+            title: 'Deletado com',
             showConfirmButton: false,
             timer: 1500
           })
@@ -84,7 +83,7 @@ export class RegisterFuncionariosComponent implements OnInit {
         }
       })
     }
-  }
+  }*/
 
   public dialog() {
 
