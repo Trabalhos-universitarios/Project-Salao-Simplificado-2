@@ -6,6 +6,7 @@ import { RegisterFuncionariosComponent } from 'src/admin/components/home-admin/r
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { EscalaComponent } from 'src/admin/components/home-admin/escala/escala.component';
 
 
 
@@ -15,10 +16,12 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'login/:id', component: LoginComponent},
   {path: 'home', component: HomePageComponent},
+
   {path: 'admin', component: LoginAdminComponent},
   {path: 'admin/login', component: LoginAdminComponent},
   {path: 'admin/home', component: HomeAdminComponent},
   {path: 'admin/register-new-employee', component: RegisterFuncionariosComponent},
+  {path: 'admin/register-escala', component: EscalaComponent},
 
 ];
 

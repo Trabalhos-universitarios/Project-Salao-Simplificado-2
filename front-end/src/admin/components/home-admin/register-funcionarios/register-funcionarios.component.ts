@@ -93,6 +93,4 @@ export class RegisterFuncionariosComponent implements OnInit {
       });
     }
   }
-
-
 }

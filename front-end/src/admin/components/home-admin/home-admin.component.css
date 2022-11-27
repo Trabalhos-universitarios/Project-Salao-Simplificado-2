@@ -8,3 +8,22 @@
 
   text-align: center;
 }
+
+.button-add-funcionario{
+  margin-left: 15px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  position: absolute;
+}
+
+.button-add-escala{
+  margin-top: 50px;
+  margin-left: 15px;
+  margin-bottom: 50px;
+  background-color: transparent;
+  position: absolute;
+}
+
+.mat-button:hover{
+  color:#c2185b;
+}

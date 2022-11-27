@@ -21,4 +21,8 @@ export class HomeAdminComponent implements OnInit {
     this.router.navigate(['admin/register-new-employee'])
   }
 
+  public addEscala() {
+    this.router.navigate(['admin/register-escala'])
+  }
+
 }

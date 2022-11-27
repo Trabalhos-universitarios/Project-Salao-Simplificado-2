@@ -13,6 +13,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { LoginAdminComponent } from 'src/admin/components/login-admin/login-admin.component';
 import { RegisterFuncionariosComponent } from 'src/admin/components/home-admin/register-funcionarios/register-funcionarios.component';
 import { HomeAdminComponent } from 'src/admin/components/home-admin/home-admin.component';
+import { EscalaComponent } from 'src/admin/components/home-admin/escala/escala.component';
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { HomeAdminComponent } from 'src/admin/components/home-admin/home-admin.c
     TableEscalaComponent,
     LoginAdminComponent,
     RegisterFuncionariosComponent,
-    HomeAdminComponent
+    HomeAdminComponent,
+    EscalaComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { HomeAdminComponent } from 'src/admin/components/home-admin/home-admin.c
     MatDialogModule,
     MatCheckboxModule,
     MatGridListModule,
-    FormsModule
+    FormsModule,
+    MatDatepickerModule,
 
   ],
   providers: [],
