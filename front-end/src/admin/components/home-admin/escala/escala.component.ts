@@ -1,64 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-
-const USER_DATA = [
-  {
-    id: 1,
-    name: 'John Smith',
-    occupation: 'Advisor',
-    dateOfBirth: '1984-05-05',
-    age: 36,
-  },
-  {
-    id: 2,
-    name: 'Muhi Masri',
-    occupation: 'Developer',
-    dateOfBirth: '1992-02-02',
-    age: 28,
-  },
-  {
-    id: 3,
-    name: 'Peter Adams',
-    occupation: 'HR',
-    dateOfBirth: '2000-01-01',
-    age: 20,
-  },
-  {
-    id: 4,
-    name: 'Lora Bay',
-    occupation: 'Marketing',
-    dateOfBirth: '1977-03-03',
-    age: 43,
-  },
-];
-const COLUMNS_SCHEMA = [
-  {
-    key: 'name',
-    type: 'text',
-    label: 'Full Name',
-  },
-  {
-    key: 'occupation',
-    type: 'text',
-    label: 'Occupation',
-  },
-  {
-    key: 'dateOfBirth',
-    type: 'date',
-    label: 'Date of Birth',
-  },
-  {
-    key: 'age',
-    type: 'number',
-    label: 'Age',
-  },
-  {
-    key: 'isEdit',
-    type: 'isEdit',
-    label: '',
-  },
-];
-
+import { RegisterEscalaModel } from 'src/admin/models/registerEscala.model';
+import { AdminService } from 'src/admin/services/admin.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-escala',
@@ -67,24 +10,64 @@ const COLUMNS_SCHEMA = [
 })
 export class EscalaComponent implements OnInit {
 
-  constructor() {}
-  ngOnInit() {}
+  constructor(
+    private escalaService: AdminService
+  ) {}
 
-  displayedColumns: string[] = COLUMNS_SCHEMA.map((col) => col.key);
-  dataSource = USER_DATA;
-  columnsSchema: any = COLUMNS_SCHEMA;
-  addRow() {
-    const newRow = {
-      id: Date.now(),
-      name: '',
-      occupation: '',
-      dateOfBirth: '',
-      age: 0,
-      isEdit: true,
-    };
-    this.dataSource = [newRow, ...this.dataSource];
+  public segunda: any;
+  public terca: any;
+  public quarta: any;
+  public quinta: any;
+  public sexta: any;
+  public sabado: any;
+  public domingo: any;
+
+  enviarEscala() {
+
+    let escalas: RegisterEscalaModel = new RegisterEscalaModel(
+      this.segunda,
+      this.terca,
+      this.quarta,
+      this.quinta,
+      this.sexta,
+      this.sabado,
+      this.domingo
+    )
+
+    if (escalas.segunda == undefined || escalas.terca == undefined || escalas.quarta == undefined
+      || escalas.quinta == undefined || escalas.sexta == undefined || escalas.sabado == undefined
+      || escalas.domingo == undefined)
+    {
+      console.log('errrrooror');
+    }
+    else{
+      this.escalaService.registerEscala(escalas).subscribe(
+        resposta => {
+  
+          if (resposta === 'success') {
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Cadastro efetuado com sucesso!',
+              showConfirmButton: false,
+              timer: 2500
+            })
+          }
+        }
+      )
+    }
+    
+
+
   }
-  removeRow(id: number) {
-    this.dataSource = this.dataSource.filter((u) => u.id !== id);
+
+
+  ngOnInit() {
+
   }
+
+  displayedColumns: string[] = ['segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado', 'domingo', 'enviar'];
+  dataSource = [0]
+
+
 }

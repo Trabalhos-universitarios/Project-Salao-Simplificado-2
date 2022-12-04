@@ -8,29 +8,28 @@ h1{
   margin-left: 70px;
 }
 
-.btn-edit{
-  background-color: transparent;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-
-.btn-edit:hover{
-  background-color: transparent;
+button{
   color: white;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 
-  border-radius: none;
 }
+
+button:hover{
+  color:#c2185b;
+}
+
+button mat-icon {
+  height: 50px;
+  width: 50px;
+}
+
+
 
 th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   text-align: center;
 }
 
-.button-add-funcionario{
-  margin-right: 840px;
-  background-color: transparent;
-}
-.mat-button:hover{
-  color:#c2185b;
-}
 
 

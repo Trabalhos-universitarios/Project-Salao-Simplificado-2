@@ -5,6 +5,7 @@ import { FuncionarioInterface } from 'src/interfaces/funcionario-interface';
 import { AdminModel } from '../models/admin.model';
 import { first, Observable, map } from 'rxjs';
 import { RegisterFuncionarioModel } from '../models/register-funcionario.model';
+import { RegisterEscalaModel } from '../models/registerEscala.model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,17 +28,7 @@ export class AdminService {
 
 
   // Método para buscar os funcionários no banco e mostrar na tabela
-  /*public getEmployee(): Observable<FuncionarioInterface[]> {
-    const httpOptions = {
-      headers: new HttpHeaders({'Contente-Type': 'aplication/json'})
-    };
-    // Buscar na base de dados
-    return this.http.get<FuncionarioInterface[]>(`${API}/getEmployee.php`)
-    .pipe(
-      first(),//Encerra conexão
-      res => res
-    )
-  }*/
+
 
   public getEmployee(): Observable<FuncionarioInterface[]> {
 
@@ -61,6 +52,16 @@ export class AdminService {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
     return this.http.post(`${API}/registrationEmployee.php`, JSON.stringify(newFuncionario), httpOptions); //registration
+  }
+
+  //REGISTRAR ESCALA
+  public registerEscala(newEscala: RegisterEscalaModel) {
+
+    console.log(JSON.stringify(newEscala));
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.http.post(`${API}/setScale.php`, JSON.stringify(newEscala), httpOptions); //registration
   }
 
 }
