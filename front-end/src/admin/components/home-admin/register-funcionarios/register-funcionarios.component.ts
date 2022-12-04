@@ -1,18 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+
+import { AdminService } from 'src/admin/services/admin.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { FuncionarioInterface } from 'src/interfaces/funcionario-interface';
+import { Funcionario, FuncionariosColumns } from 'src/admin/interfaces/funcionario';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RegisterModel } from 'src/models/register-model';
-import { UserService } from 'src/services/user.service';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { RegisterFuncionarioModel } from 'src/admin/models/register-funcionario.model';
+
+
+
+const COLUMNS_SCHEMA = [
+
+]
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  selector: 'app-register-funcionarios',
+  templateUrl: './register-funcionarios.component.html',
+  styleUrls: ['./register-funcionarios.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterFuncionariosComponent implements OnInit {
+
   constructor(
-    private UserService: UserService,
+    private adminService: AdminService,
     private newUserForm: FormBuilder,
     private onLogin: Router
   ) { }
@@ -21,8 +32,8 @@ export class RegisterComponent implements OnInit {
 
   formulario = this.newUserForm.group({
     nome: new FormControl(null, [Validators.required]),
+    cpf: new FormControl(null, [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
     email: new FormControl(null, [Validators.required, Validators.email]),
-    telefone: new FormControl(null, [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
     senha: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
     confirmPsw: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)])
   });
@@ -50,16 +61,16 @@ export class RegisterComponent implements OnInit {
       })
     }
     else {
-      let newUser: RegisterModel = new RegisterModel(
+      let newFuncionario: RegisterFuncionarioModel = new RegisterFuncionarioModel(
         this.formulario.value.nome,
+        this.formulario.value.cpf,
         this.formulario.value.email,
         this.formulario.value.senha,
-        this.formulario.value.telefone
       );
-      this.UserService.registerUser(newUser).subscribe(res => {
-        console.log('Essa é a resposta', res)
+      this.adminService.registerFunc(newFuncionario).subscribe(resposta => {
+        console.log('Essa é a resposta', resposta)
 
-        if (res === 'success') {
+        if (resposta === 'success') {
           Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -71,7 +82,7 @@ export class RegisterComponent implements OnInit {
           this.onLogin.navigate(['/login'])
 
         }
-        else if (res === 'error') {
+        else if (resposta === 'error') {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -83,4 +94,3 @@ export class RegisterComponent implements OnInit {
     }
   }
 }
-

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-topo',
@@ -7,9 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private onLogout: Router
+  ) { }
 
   ngOnInit(): void {
+
+
+  }
+
+  public logout() {
+
+
+    Swal.fire({
+      title: 'Deseja realmente sair?',
+      showCancelButton: true,
+
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Logout Success!',
+          showConfirmButton: false,
+          timer: 2000,
+        });
+
+        this.onLogout.navigate(['/login'])
+      }
+    })
   }
 
 }

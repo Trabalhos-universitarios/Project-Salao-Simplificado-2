@@ -1,0 +1,147 @@
+<h1>
+  <b> Registrar Escalas! </b>
+</h1>
+<article class="table-header">
+</article>
+<table mat-table [dataSource]="dataSource">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="segunda">
+    <th mat-header-cell *matHeaderCellDef> Segunda </th>
+    <td mat-cell *matCellDef="let element">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Selecionar</mat-label>
+        <mat-select [(value)]="segunda">
+
+          <mat-option [value]="1">Trabalhar</mat-option>
+          <mat-option [value]="0">Folgar</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+    </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="terca">
+    <th mat-header-cell *matHeaderCellDef> Terca </th>
+    <td mat-cell *matCellDef="let element">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Selecionar</mat-label>
+        <mat-select [(value)]="terca">
+
+          <mat-option [value]="1">Trabalhar</mat-option>
+          <mat-option [value]="0">Folgar</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+    </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="quarta">
+    <th mat-header-cell *matHeaderCellDef> Quarta </th>
+    <td mat-cell *matCellDef="let element">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Selecionar</mat-label>
+        <mat-select [(value)]="quarta">
+
+          <mat-option [value]="1">Trabalhar</mat-option>
+          <mat-option [value]="0">Folgar</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+    </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="quinta">
+    <th mat-header-cell *matHeaderCellDef> Quinta </th>
+    <td mat-cell *matCellDef="let element">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Selecionar</mat-label>
+        <mat-select [(value)]="quinta">
+
+          <mat-option [value]="1">Trabalhar</mat-option>
+          <mat-option [value]="0">Folgar</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+    </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="sexta">
+    <th mat-header-cell *matHeaderCellDef> Sexta </th>
+    <td mat-cell *matCellDef="let element">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Selecionar</mat-label>
+        <mat-select [(value)]="sexta">
+
+          <mat-option [value]="1">Trabalhar</mat-option>
+          <mat-option [value]="0">Folgar</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+    </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="sabado">
+    <th mat-header-cell *matHeaderCellDef> Sabado </th>
+    <td mat-cell *matCellDef="let element">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Selecionar</mat-label>
+        <mat-select [(value)]="sabado">
+
+          <mat-option [value]="1">Trabalhar</mat-option>
+          <mat-option [value]="0">Folgar</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+    </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="domingo">
+    <th mat-header-cell *matHeaderCellDef> Domingo </th>
+    <td mat-cell *matCellDef="let element">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Selecionar</mat-label>
+        <mat-select [(value)]="domingo">
+
+          <mat-option [value]="1">Trabalhar</mat-option>
+          <mat-option [value]="0">Folgar</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="enviar">
+    <th mat-header-cell *matHeaderCellDef>  </th>
+    <td mat-cell *matCellDef="let element">
+
+      <button (click)="enviarEscala()">
+        <mat-icon>add_box</mat-icon>
+      </button>
+
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

@@ -1,0 +1,42 @@
+<form [formGroup]="formulario" novalidate (ngSubmit)="loginAdmin()">
+  <div class="forms-container">
+    <h1>Administrador!</h1>
+    <mat-form-field aspect="fill">
+      <mat-label> Your e-mail admin </mat-label>
+      <input
+        matInput
+        placeholder="email@admin.com"
+        formControlName="email"
+        obrigatório
+      />
+      <!-- <mat-error * ngIf="email.invalid"> {{ getErrorMessage() }} </mat-error> -->
+    </mat-form-field>
+
+    <mat-form-field aspect="fill">
+      <mat-label>Your password admin</mat-label>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        formControlName="senha"
+      />
+      <a
+        color="primary"
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </a>
+    </mat-form-field>
+
+    <section>
+      <div class="button-forms">
+        <button type="submit" mat-flat-button color="primary" >Login</button>
+        <!-- <button mat-flat-button disabled>Disabled</button> -->
+      </div>
+    </section>
+  </div>
+</form>
+

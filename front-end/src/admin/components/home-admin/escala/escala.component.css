@@ -1,0 +1,35 @@
+h1{
+  margin-top: 25px;
+  color: #c2185b;
+}
+.mat-table{
+  margin-top: 100px;
+  width: 90%;
+  margin-left: 70px;
+}
+
+button{
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+}
+
+button:hover{
+  color:#c2185b;
+}
+
+button mat-icon {
+  height: 50px;
+  width: 50px;
+}
+
+
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  text-align: center;
+}
+
+
+
